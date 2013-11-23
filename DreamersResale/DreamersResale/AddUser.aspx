@@ -106,6 +106,7 @@
                 </td>
             </tr>
         </table>
+        <asp:Button ID="addCustomerButton" runat="server" text="Submit" OnClick="addCustomerButton_Click"/>
     </div>
 
 </asp:Content>

@@ -8,19 +8,15 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Configuration;
+using System.Data;
+using DreamersResale.App_Code;
 
 namespace DreamersResale
 {
     public partial class AddUser : System.Web.UI.Page
     {
-        //SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=\"D:\\DROPBOX\\SENIORDESIGN\\CORE\\R1\\DREAMERSRESALE\\DREAMERSRESALE\\APP_DATA\\MAINDATABASE.MDF\";Integrated Security=True");
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["AuctionManagement"].ToString()))
-            {
-                Console.WriteLine("");
-            }
         }
 
         private bool ValidateSubmission()
@@ -86,9 +82,9 @@ namespace DreamersResale
 
         private bool ValidState()
         {
-            if (!String.IsNullOrEmpty(cityTextBox.Text)
-               && !String.IsNullOrWhiteSpace(cityTextBox.Text)
-               && cityTextBox.Text.Length <= 2)
+            if (!String.IsNullOrEmpty(stateTextBox.Text)
+               && !String.IsNullOrWhiteSpace(stateTextBox.Text)
+               && stateTextBox.Text.Length <= 2)
             {
                 return true;
             }
@@ -98,7 +94,7 @@ namespace DreamersResale
             }
         }
 
-        private bool ValidCity()
+        private bool ValidPostalCode()
         {
             if (!String.IsNullOrEmpty(zipTextBox.Text)
                && !String.IsNullOrWhiteSpace(zipTextBox.Text)
@@ -137,6 +133,21 @@ namespace DreamersResale
             else
             {
                 return false;
+            }
+        }
+
+        protected void addCustomerButton_Click(object sender, EventArgs e)
+        {
+            if (ValidateSubmission())
+            {
+                Customer.CreateBidder(firstNameTextBox.Text,
+                                        lastNameTextBox.Text,
+                                        addressTextBox.Text,
+                                        cityTextBox.Text,
+                                        stateTextBox.Text,
+                                        zipTextBox.Text,
+                                        homePhoneTextBox.Text,
+                                        workPhoneTextBox.Text);
             }
         }
     }
