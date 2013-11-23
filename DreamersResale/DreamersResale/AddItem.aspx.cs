@@ -19,38 +19,42 @@ namespace DreamersResale
         {
 
         }
-        static bool properform(string x, string y, string z)
+        static bool properform(string x, string y)
         {
         return true;
         }
         protected void Addbutton_Click(object sender, EventArgs e)
         {
-           
-             string myQuery;
+
+            string myQuery;
             SqlDataReader myReader = null;
             SqlCommand myCommand;
 
-            if ( properform(Itemid.Text, Auctionid.Text, Description.Text))
+            if (properform(cosign.Text, Description.Text))
             {
-                myQuery = "SELECT ItemID, Description, Bidder, BidAmount FROM [Item] WHERE itemID = " + this.item_to_get.Text;
+                myQuery = "INSERT INTO [Item] (ConsignorID,  Description,) VALUES ('" + cosign.Text + "','" + Description.Text + "')";
                 try
                 {
                     conn.Open();
                     myCommand = new SqlCommand(myQuery, conn);
                     myReader = myCommand.ExecuteReader();
-                    this.txtItemID.Text = myReader["ItemID"].ToString();
-                    this.txtDescription.Text = myReader["Description"].ToString();
-                    this.txtBidder.Text = myReader["Bidder"].ToString();
-                    this.txtBidAmount.Text = myReader["BidAmount"].ToString();
+                   
+                    myQuery = "SELECT ItemID FROM [Item] ";
+               
+                    myCommand = new SqlCommand(myQuery, conn);
+                    myReader = myCommand.ExecuteReader();
+
                 }
                 catch (Exception exc)
                 {
-                    this.txtItemID.Text = exc.ToString();
+                    Description.Text = exc.ToString();
                 }
                 finally
                 {
                     conn.Close();
                 }
+            }
+            else { }
         }
     }
 }
