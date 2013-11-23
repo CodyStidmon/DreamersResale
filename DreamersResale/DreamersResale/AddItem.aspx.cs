@@ -40,7 +40,7 @@ namespace DreamersResale
                     myReader = myCommand.ExecuteReader();
                    
                     myQuery = "SELECT ItemID FROM [Item] ";
-               
+                    myReader.Read();
                     myCommand = new SqlCommand(myQuery, conn);
                     myReader = myCommand.ExecuteReader();
 
