@@ -13,6 +13,15 @@ namespace DreamersResale {
     public partial class AddUser {
         
         /// <summary>
+        /// Table1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTable Table1;
+        
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -22,13 +31,31 @@ namespace DreamersResale {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// name control.
+        /// firstNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox name;
+        protected global::System.Web.UI.WebControls.TextBox firstNameTextBox;
+        
+        /// <summary>
+        /// Label18 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label18;
+        
+        /// <summary>
+        /// lastNameTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox lastNameTextBox;
         
         /// <summary>
         /// Label2 control.
@@ -40,13 +67,13 @@ namespace DreamersResale {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// bidder_no control.
+        /// bidderNumberTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox bidder_no;
+        protected global::System.Web.UI.WebControls.TextBox bidderNumberTextBox;
         
         /// <summary>
         /// Label3 control.
@@ -58,13 +85,13 @@ namespace DreamersResale {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// firm control.
+        /// firmTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox firm;
+        protected global::System.Web.UI.WebControls.TextBox firmTextBox;
         
         /// <summary>
         /// Label4 control.
@@ -76,13 +103,13 @@ namespace DreamersResale {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// address control.
+        /// addressTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox address;
+        protected global::System.Web.UI.WebControls.TextBox addressTextBox;
         
         /// <summary>
         /// Label5 control.
@@ -94,13 +121,13 @@ namespace DreamersResale {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// city control.
+        /// cityTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox city;
+        protected global::System.Web.UI.WebControls.TextBox cityTextBox;
         
         /// <summary>
         /// Label6 control.
@@ -112,13 +139,13 @@ namespace DreamersResale {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// state control.
+        /// stateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox state;
+        protected global::System.Web.UI.WebControls.TextBox stateTextBox;
         
         /// <summary>
         /// Label7 control.
@@ -130,13 +157,13 @@ namespace DreamersResale {
         protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// zip control.
+        /// zipTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox zip;
+        protected global::System.Web.UI.WebControls.TextBox zipTextBox;
         
         /// <summary>
         /// Label8 control.
@@ -148,13 +175,13 @@ namespace DreamersResale {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// office_phone control.
+        /// workPhoneTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox office_phone;
+        protected global::System.Web.UI.WebControls.TextBox workPhoneTextBox;
         
         /// <summary>
         /// Label9 control.
@@ -166,13 +193,13 @@ namespace DreamersResale {
         protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
-        /// home_phone control.
+        /// homePhoneTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox home_phone;
+        protected global::System.Web.UI.WebControls.TextBox homePhoneTextBox;
         
         /// <summary>
         /// Label10 control.
@@ -184,13 +211,13 @@ namespace DreamersResale {
         protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
-        /// drivers_license control.
+        /// driversLicenseNumberTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox drivers_license;
+        protected global::System.Web.UI.WebControls.TextBox driversLicenseNumberTextBox;
         
         /// <summary>
         /// Label11 control.
@@ -202,13 +229,13 @@ namespace DreamersResale {
         protected global::System.Web.UI.WebControls.Label Label11;
         
         /// <summary>
-        /// license_state control.
+        /// driversLicenseStateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox license_state;
+        protected global::System.Web.UI.WebControls.TextBox driversLicenseStateTextBox;
         
         /// <summary>
         /// Label12 control.
@@ -220,13 +247,13 @@ namespace DreamersResale {
         protected global::System.Web.UI.WebControls.Label Label12;
         
         /// <summary>
-        /// sales_tax control.
+        /// salesTaxNumberTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox sales_tax;
+        protected global::System.Web.UI.WebControls.TextBox salesTaxNumberTextBox;
         
         /// <summary>
         /// Label13 control.
@@ -238,13 +265,13 @@ namespace DreamersResale {
         protected global::System.Web.UI.WebControls.Label Label13;
         
         /// <summary>
-        /// bank control.
+        /// bankTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox bank;
+        protected global::System.Web.UI.WebControls.TextBox bankTextBox;
         
         /// <summary>
         /// Label14 control.
