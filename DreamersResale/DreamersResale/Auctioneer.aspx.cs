@@ -22,7 +22,6 @@ namespace DreamersResale
 
         protected void get_item_Click(object sender, EventArgs e)
         {
-            //this is another test (Tracy)
             string myQuery;
             SqlDataReader myReader = null;
             SqlCommand myCommand;
