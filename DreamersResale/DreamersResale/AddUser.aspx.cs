@@ -98,7 +98,7 @@ namespace DreamersResale
             }
         }
 
-        private bool ValidCity()
+        private bool ValidZip()
         {
             if (!String.IsNullOrEmpty(zipTextBox.Text)
                && !String.IsNullOrWhiteSpace(zipTextBox.Text)

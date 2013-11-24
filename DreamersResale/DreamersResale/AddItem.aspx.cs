@@ -19,8 +19,20 @@ namespace DreamersResale
         {
 
         }
-        static bool properform(string x, string y)
+        protected bool properform(string x)
         {
+            try
+            {
+                SqlDataReader myReader = null;
+                string myQuerey = "select * from [Consignor] where ConsignorID ="+x;
+                SqlCommand myCommand = new SqlCommand(myQuerey, conn);
+                myReader = myCommand.ExecuteReader();
+               
+            }
+            catch (Exception e)
+            {
+                return false;
+            } 
         return true;
         }
         protected void Addbutton_Click(object sender, EventArgs e)
@@ -30,17 +42,19 @@ namespace DreamersResale
             SqlDataReader myReader = null;
             SqlCommand myCommand;
 
-            if (properform(cosign.Text, Description.Text))
-            {
-                myQuery = "INSERT INTO [Item] (ConsignorID,  Description,) VALUES ('" + cosign.Text + "','" + Description.Text + "')";
+            //if (properform(cosign.Text))
+            //{
+                myQuery = "INSERT INTO [Item] (ConsignorID,  Description) VALUES ('" + Convert.ToInt32(cosign.Text )+ "','" + Description.Text + "')";
                 try
                 {
                     conn.Open();
                     myCommand = new SqlCommand(myQuery, conn);
                     myReader = myCommand.ExecuteReader();
                    
-                    myQuery = "SELECT ItemID FROM [Item] ";
+                    myQuery = "SELECT * FROM [Item] WHERE Description = "+Description.Text;
+                  //  myReader.VisibleFieldCount
                     myReader.Read();
+                    itemnumber.Text = myReader["ItemID"].ToString();
                     myCommand = new SqlCommand(myQuery, conn);
                     myReader = myCommand.ExecuteReader();
 
@@ -53,8 +67,8 @@ namespace DreamersResale
                 {
                     conn.Close();
                 }
-            }
-            else { }
+           // }
+            //else { }
         }
     }
 }
