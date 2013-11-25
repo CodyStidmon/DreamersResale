@@ -103,6 +103,7 @@
                     <asp:CheckBox runat="server" ID="contact_me" Text="I HAVE PROPERTY TO SELL." GroupName="payment_method" Font-Bold="true" Font-Italic="true" Font-Size="15px" Height="20px"></asp:CheckBox>
                     <asp:Label runat="server" ID="Label17" Text="PLEASE CONTACT ME ON" Font-Bold="true" Font-Italic="true" Font-Size="15px"></asp:Label>
                     <asp:TextBox runat="server" ID="contact_date" Height="20px" Width="200px"></asp:TextBox>
+                    <asp:Button ID="Add" runat="server" OnClick="Add_Click" Text="Add" />
                 </td>
             </tr>
         </table>

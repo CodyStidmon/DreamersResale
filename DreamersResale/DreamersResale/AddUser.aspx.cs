@@ -8,13 +8,14 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Web.Configuration;
+using System.Diagnostics;
 
 namespace DreamersResale
 {
     public partial class AddUser : System.Web.UI.Page
     {
         //SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=\"D:\\DROPBOX\\SENIORDESIGN\\CORE\\R1\\DREAMERSRESALE\\DREAMERSRESALE\\APP_DATA\\MAINDATABASE.MDF\";Integrated Security=True");
-
+        private SQLHandler h = new SQLHandler();
         protected void Page_Load(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["DefaultConnection"].ToString()))
@@ -25,7 +26,17 @@ namespace DreamersResale
 
         private bool ValidateSubmission()
         {
-            return false;
+            if(ValidFirstName() && ValidLastName() && ValidAddress() 
+                && ValidCity() && ValidState() && ValidHomePhone()
+                && ValidWorkPhone())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
 
         private bool ValidFirstName()
@@ -86,9 +97,9 @@ namespace DreamersResale
 
         private bool ValidState()
         {
-            if (!String.IsNullOrEmpty(cityTextBox.Text)
-               && !String.IsNullOrWhiteSpace(cityTextBox.Text)
-               && cityTextBox.Text.Length <= 2)
+            if (!String.IsNullOrEmpty(stateTextBox.Text)
+               && !String.IsNullOrWhiteSpace(stateTextBox.Text)
+               && stateTextBox.Text.Length <= 2)
             {
                 return true;
             }
@@ -123,6 +134,23 @@ namespace DreamersResale
             else
             {
                 return false;
+            }
+        }
+
+        protected void Add_Click(object sender, EventArgs e)
+        {
+            if (ValidateSubmission())
+            {
+                String[] addstring = new String[7];
+                addstring[0] = firstNameTextBox.Text;
+                addstring[1] = lastNameTextBox.Text;
+                addstring[2] = addressTextBox.Text;
+                addstring[3] = cityTextBox.Text;
+                addstring[4] = stateTextBox.Text;
+                addstring[5] = homePhoneTextBox.Text;
+                addstring[6] = workPhoneTextBox.Text;
+
+                h.Add_Client(addstring, 1);
             }
         }
     }
