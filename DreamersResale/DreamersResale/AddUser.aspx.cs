@@ -98,23 +98,6 @@ namespace DreamersResale
             }
         }
 
-<<<<<<< .mine
-=======
-        private bool ValidZip()
-        {
-            if (!String.IsNullOrEmpty(zipTextBox.Text)
-               && !String.IsNullOrWhiteSpace(zipTextBox.Text)
-               && zipTextBox.Text.Length <= 12)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
->>>>>>> .r15
         private bool ValidHomePhone()
         {
             if (!String.IsNullOrEmpty(homePhoneTextBox.Text)
