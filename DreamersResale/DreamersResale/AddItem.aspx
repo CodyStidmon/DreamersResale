@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
    
-                    <asp:Label ID="Label1" runat="server" Text="Cosignor" Font-Bold="true" Font-Italic="true" Font-Size="15px"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Consignor" Font-Bold="true" Font-Italic="true" Font-Size="15px"></asp:Label>
                     <asp:TextBox runat="server" ID="cosign" Height="20px" Width="200px"></asp:TextBox>
                     <asp:Label ID="Label4" runat="server" Text="Description" Font-Bold="true" Font-Italic="true" Font-Size="15px"></asp:Label>
                     <asp:TextBox runat="server" ID="Description" Height="28px" Width="200px"></asp:TextBox>

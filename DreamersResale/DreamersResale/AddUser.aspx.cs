@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
-using System.Configuration;
+using System.Web.Configuration;
 
 namespace DreamersResale
 {
@@ -17,7 +17,7 @@ namespace DreamersResale
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["AuctionManagement"].ToString()))
+            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["DefaultConnection"].ToString()))
             {
                 Console.WriteLine("");
             }
@@ -98,6 +98,8 @@ namespace DreamersResale
             }
         }
 
+<<<<<<< .mine
+=======
         private bool ValidZip()
         {
             if (!String.IsNullOrEmpty(zipTextBox.Text)
@@ -112,6 +114,7 @@ namespace DreamersResale
             }
         }
 
+>>>>>>> .r15
         private bool ValidHomePhone()
         {
             if (!String.IsNullOrEmpty(homePhoneTextBox.Text)
